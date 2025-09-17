@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profesional por un Día - Cyber Revolution</title>
+    <link rel="stylesheet" href="css/cyberpunk-theme.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Source+Code+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Efecto de partículas de fondo -->
+    <div id="particles-container"></div>
+    
+    <!-- Grid de fondo -->
+    <div class="cyber-grid"></div>
+    
+    <!-- Terminal de navegación -->
+    <nav class="cyber-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="terminal-prompt">root@cyber:~$</span>
+                <span class="logo-text">PROFESIONAL_DAY.exe</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">INICIO</a>
+                <a href="registro.html" class="nav-link">REGISTRO</a>
+                <a href="#about" class="nav-link">MISIÓN</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="btn close"></span>
+                        <span class="btn minimize"></span>
+                        <span class="btn maximize"></span>
+                    </div>
+                    <div class="terminal-title">CYBER_ACCESS_TERMINAL</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="prompt">user@futuro:~$</span>
+                        <span class="command" id="typing-text"></span>
+                        <span class="cursor">_</span>
+                    </div>
+                    <div class="terminal-output">
+                        <div class="output-line">Access granted: Tu carrera en ciberseguridad comienza aquí</div>
+                        <div class="output-line">Decodifica tu futuro profesional</div>
+                        <div class="output-line">Join the cyber revolution</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="countdown-container">
+                <h2 class="countdown-title">MISIÓN INICIA EN:</h2>
+                <div class="countdown" id="countdown">
+                    <div class="time-unit">
+                        <span class="time-value" id="days">00</span>
+                        <span class="time-label">DÍAS</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-value" id="hours">00</span>
+                        <span class="time-label">HORAS</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-value" id="minutes">00</span>
+                        <span class="time-label">MIN</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-value" id="seconds">00</span>
+                        <span class="time-label">SEG</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="qr-container">
+                <a href="registro.html" class="qr-link">
+                    <div class="qr-frame">
+                        <div class="qr-code">
+                            <div class="qr-placeholder">
+                                <div class="qr-pattern"></div>
+                                <div class="qr-text">ESCANEA PARA REGISTRARTE</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Registro -->
+    <section id="register" class="register-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">INICIAR MISIÓN</h2>
+                <p class="section-subtitle">Completa tu perfil de hacker ético</p>
+            </div>
+
+            <div class="registration-form-container">
+                <div class="form-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span id="progress-text">Nivel de acceso: 0%</span>
+                    </div>
+                </div>
+
+                <form class="cyber-form" id="registration-form">
+                    <div class="form-group">
+                        <label class="form-label">Nombre completo</label>
+                        <input type="text" class="form-input" placeholder="user@futuro:~$ ingresa_tu_nombre" required>
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-input" placeholder="hacker@universidad.edu" required>
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Universidad/Institución</label>
+                        <input type="text" class="form-input" placeholder="Universidad_Tech_Institute" required>
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Nivel académico</label>
+                        <select class="form-select" required>
+                            <option value="">Selecciona tu nivel</option>
+                            <option value="pregrado">Pregrado</option>
+                            <option value="posgrado">Posgrado</option>
+                            <option value="doctorado">Doctorado</option>
+                        </select>
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Especializaciones de interés</label>
+                        <div class="specializations-grid">
+                            <label class="specialization-item">
+                                <input type="checkbox" name="specialization" value="ethical-hacking">
+                                <span class="checkbox-custom"></span>
+                                <span class="specialization-text">Ethical Hacking & Penetration Testing</span>
+                            </label>
+                            <label class="specialization-item">
+                                <input type="checkbox" name="specialization" value="incident-response">
+                                <span class="checkbox-custom"></span>
+                                <span class="specialization-text">Incident Response & Forensics</span>
+                            </label>
+                            <label class="specialization-item">
+                                <input type="checkbox" name="specialization" value="security-architecture">
+                                <span class="checkbox-custom"></span>
+                                <span class="specialization-text">Security Architecture & Engineering</span>
+                            </label>
+                            <label class="specialization-item">
+                                <input type="checkbox" name="specialization" value="threat-intelligence">
+                                <span class="checkbox-custom"></span>
+                                <span class="specialization-text">Threat Intelligence & Analysis</span>
+                            </label>
+                            <label class="specialization-item">
+                                <input type="checkbox" name="specialization" value="governance">
+                                <span class="checkbox-custom"></span>
+                                <span class="specialization-text">Governance, Risk & Compliance</span>
+                            </label>
+                            <label class="specialization-item">
+                                <input type="checkbox" name="specialization" value="cloud-security">
+                                <span class="checkbox-custom"></span>
+                                <span class="specialization-text">Cloud Security & DevSecOps</span>
+                            </label>
+                            <label class="specialization-item">
+                                <input type="checkbox" name="specialization" value="malware-analysis">
+                                <span class="checkbox-custom"></span>
+                                <span class="specialization-text">Malware Analysis & Reverse Engineering</span>
+                            </label>
+                            <label class="specialization-item">
+                                <input type="checkbox" name="specialization" value="social-engineering">
+                                <span class="checkbox-custom"></span>
+                                <span class="specialization-text">Social Engineering & Human Factors</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Experiencia previa en ciberseguridad</label>
+                        <textarea class="form-textarea" placeholder="Describe tu experiencia, proyectos, certificaciones..."></textarea>
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">INICIAR MISIÓN</span>
+                        <div class="btn-glow"></div>
+                        <div class="loading-spinner" id="loading-spinner"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección About -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">LA MISIÓN</h2>
+                <p class="section-subtitle">De estudiante a guardian digital en un día</p>
+            </div>
+
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Protege el Futuro</h3>
+                    <p>Aprende las técnicas más avanzadas de ciberseguridad de la mano de expertos de la industria.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="card-icon">🔍</div>
+                    <h3>Analiza Amenazas</h3>
+                    <p>Descubre cómo identificar y neutralizar las amenazas cibernéticas más sofisticadas.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Acción Inmediata</h3>
+                    <p>Participa en simulaciones reales y ejercicios prácticos de respuesta a incidentes.</p>
+                </div>
+            </div>
+
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number" id="registered-count">0</div>
+                    <div class="stat-label">HACKERS REGISTRADOS</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">TASA DE EMPLEABILIDAD</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">MONITOREO GLOBAL</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="cyber-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CYBER REVOLUTION</h4>
+                    <p>Preparando la próxima generación de guardianes digitales</p>
+                </div>
+                <div class="footer-section">
+                    <h4>CONTACTO</h4>
+                    <p>contact@cyberrevolution.edu</p>
+                    <p>+1 (555) CYBER-01</p>
+                </div>
+                <div class="footer-section">
+                    <h4>SEGUIR</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">TWITTER</a>
+                        <a href="#" class="social-link">LINKEDIN</a>
+                        <a href="#" class="social-link">GITHUB</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cyber Revolution. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/particle-system.js"></script>
+    <script src="js/terminal-effects.js"></script>
+    <script src="js/form-validation.js"></script>
+</body>
+</html>
