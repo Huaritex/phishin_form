@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Profesional por un Día</title>
+    <link rel="stylesheet" href="css/cyberpunk-theme.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Source+Code+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Efecto de partículas de fondo -->
+    <div id="particles-container"></div>
+    
+    <!-- Grid de fondo -->
+    <div class="cyber-grid"></div>
+    
+    <!-- Terminal de navegación -->
+    <nav class="cyber-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="terminal-prompt">root@cyber:~$</span>
+                <span class="logo-text">REGISTRO.exe</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">INICIO</a>
+                <a href="#register" class="nav-link active">REGISTRO</a>
+                <a href="index.html#about" class="nav-link">MISIÓN</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header de Registro -->
+    <section class="register-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="btn close"></span>
+                            <span class="btn minimize"></span>
+                            <span class="btn maximize"></span>
+                        </div>
+                        <div class="terminal-title">REGISTRATION_TERMINAL</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="prompt">user@futuro:~$</span>
+                            <span class="command">./init_cyber_career.sh</span>
+                        </div>
+                        <div class="terminal-output">
+                            <div class="output-line">Iniciando proceso de registro...</div>
+                            <div class="output-line">Verificando credenciales de acceso...</div>
+                            <div class="output-line">Preparando perfil de hacker ético...</div>
+                            <div class="output-line">Access granted: Completa tu perfil para continuar</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="registration-info">
+                    <h1 class="page-title">INICIAR MISIÓN</h1>
+                    <p class="page-subtitle">Completa tu perfil de hacker ético</p>
+                    <div class="mission-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" id="registered-count">0</div>
+                            <div class="stat-label">HACKERS REGISTRADOS</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">95%</div>
+                            <div class="stat-label">TASA DE EMPLEABILIDAD</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Registro -->
+    <section id="register" class="register-section">
+        <div class="container">
+            <div class="registration-form-container">
+                <div class="form-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span id="progress-text">Nivel de acceso: 0%</span>
+                    </div>
+                </div>
+
+                <form class="cyber-form" id="registration-form">
+                    <div class="form-section">
+                        <h3 class="section-title">INFORMACIÓN PERSONAL</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Nombre completo *</label>
+                                <input type="text" name="nombre" class="form-input" placeholder="user@futuro:~$ ingresa_tu_nombre" required>
+                                <div class="input-glow"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Email *</label>
+                                <input type="email" name="email" class="form-input" placeholder="hacker@universidad.edu" required>
+                                <div class="input-glow"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Teléfono</label>
+                                <input type="tel" name="telefono" class="form-input" placeholder="+1 (555) CYBER-01">
+                                <div class="input-glow"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Edad</label>
+                                <input type="number" name="edad" class="form-input" placeholder="18" min="16" max="100">
+                                <div class="input-glow"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="section-title">INFORMACIÓN ACADÉMICA</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Universidad/Institución *</label>
+                                <input type="text" name="universidad" class="form-input" placeholder="Universidad_Tech_Institute" required>
+                                <div class="input-glow"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Carrera/Programa *</label>
+                                <input type="text" name="carrera" class="form-input" placeholder="Computer Science, IT, etc." required>
+                                <div class="input-glow"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Nivel académico *</label>
+                                <select name="nivel_academico" class="form-select" required>
+                                    <option value="">Selecciona tu nivel</option>
+                                    <option value="pregrado">Pregrado</option>
+                                    <option value="posgrado">Posgrado</option>
+                                    <option value="doctorado">Doctorado</option>
+                                    <option value="tecnico">Técnico</option>
+                                </select>
+                                <div class="input-glow"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Año de graduación</label>
+                                <input type="number" name="año_graduacion" class="form-input" placeholder="2024" min="2020" max="2030">
+                                <div class="input-glow"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="section-title">ESPECIALIZACIONES DE INTERÉS</h3>
+                        <p class="section-description">Selecciona las áreas de ciberseguridad que más te interesan:</p>
+                        
+                        <div class="specializations-grid">
+                            <label class="specialization-item">
+                                <input type="checkbox" name="specialization" value="ethical-hacking">
+                                <span class="checkbox-custom"></span>
+                                <span class="specialization-text">Ethical Hacking & Penetration Testing</span>
+                            </label>
+                            <label class="specialization-item">
+                                <input type="checkbox" name="specialization" value="incident-response">
+                                <span class="checkbox-custom"></span>
+                                <span class="specialization-text">Incident Response & Forensics</span>
+                            </label>
+                            <label class="specialization-item">
+                                <input type="checkbox" name="specialization" value="security-architecture">
+                                <span class="checkbox-custom"></span>
+                                <span class="specialization-text">Security Architecture & Engineering</span>
+                            </label>
+                            <label class="specialization-item">
+                                <input type="checkbox" name="specialization" value="threat-intelligence">
+                                <span class="checkbox-custom"></span>
+                                <span class="specialization-text">Threat Intelligence & Analysis</span>
+                            </label>
+                            <label class="specialization-item">
+                                <input type="checkbox" name="specialization" value="governance">
+                                <span class="checkbox-custom"></span>
+                                <span class="specialization-text">Governance, Risk & Compliance</span>
+                            </label>
+                            <label class="specialization-item">
+                                <input type="checkbox" name="specialization" value="cloud-security">
+                                <span class="checkbox-custom"></span>
+                                <span class="specialization-text">Cloud Security & DevSecOps</span>
+                            </label>
+                            <label class="specialization-item">
+                                <input type="checkbox" name="specialization" value="malware-analysis">
+                                <span class="checkbox-custom"></span>
+                                <span class="specialization-text">Malware Analysis & Reverse Engineering</span>
+                            </label>
+                            <label class="specialization-item">
+                                <input type="checkbox" name="specialization" value="social-engineering">
+                                <span class="checkbox-custom"></span>
+                                <span class="specialization-text">Social Engineering & Human Factors</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="section-title">EXPERIENCIA Y MOTIVACIÓN</h3>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Experiencia previa en ciberseguridad</label>
+                            <textarea name="experiencia" class="form-textarea" placeholder="Describe tu experiencia, proyectos, certificaciones, cursos online, CTFs, etc."></textarea>
+                            <div class="input-glow"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">¿Por qué te interesa la ciberseguridad? *</label>
+                            <textarea name="motivacion" class="form-textarea" placeholder="Cuéntanos qué te motiva a seguir una carrera en ciberseguridad..." required></textarea>
+                            <div class="input-glow"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">¿Qué esperas aprender en este evento?</label>
+                            <textarea name="expectativas" class="form-textarea" placeholder="Describe tus expectativas y objetivos para el evento..."></textarea>
+                            <div class="input-glow"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="section-title">CONFIGURACIÓN ADICIONAL</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">¿Cómo te enteraste del evento?</label>
+                                <select name="fuente_informacion" class="form-select">
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="redes-sociales">Redes Sociales</option>
+                                    <option value="universidad">Universidad</option>
+                                    <option value="amigos">Amigos/Colegas</option>
+                                    <option value="web">Sitio Web</option>
+                                    <option value="email">Email</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                                <div class="input-glow"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Nivel de experiencia</label>
+                                <select name="nivel_experiencia" class="form-select">
+                                    <option value="">Selecciona tu nivel</option>
+                                    <option value="principiante">Principiante</option>
+                                    <option value="intermedio">Intermedio</option>
+                                    <option value="avanzado">Avanzado</option>
+                                </select>
+                                <div class="input-glow"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="acepta_terminos" required>
+                                <span class="checkbox-custom"></span>
+                                <span class="checkbox-text">Acepto los términos y condiciones del evento *</span>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="acepta_newsletter">
+                                <span class="checkbox-custom"></span>
+                                <span class="checkbox-text">Deseo recibir información sobre futuros eventos y oportunidades</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">INICIAR MISIÓN</span>
+                        <div class="btn-glow"></div>
+                        <div class="loading-spinner" id="loading-spinner"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="cyber-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CYBER REVOLUTION</h4>
+                    <p>Preparando la próxima generación de guardianes digitales</p>
+                </div>
+                <div class="footer-section">
+                    <h4>CONTACTO</h4>
+                    <p>contact@cyberrevolution.edu</p>
+                    <p>+1 (555) CYBER-01</p>
+                </div>
+                <div class="footer-section">
+                    <h4>SEGUIR</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">TWITTER</a>
+                        <a href="#" class="social-link">LINKEDIN</a>
+                        <a href="#" class="social-link">GITHUB</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cyber Revolution. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/particle-system.js"></script>
+    <script src="js/terminal-effects.js"></script>
+    <script src="js/form-validation.js"></script>
+    <script src="js/registration-handler.js"></script>
+</body>
+</html>
